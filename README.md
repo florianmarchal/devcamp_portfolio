@@ -1,24 +1,23 @@
-# README
+# Devcamp Portfolio for Rails Training
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Rails application created for the Rails training.
 
-Things you may want to cover:
+### Features
 
-* Ruby version
+- Real time chat engine for comments
+- Blog
+- Portfolio
+- Drag and drop interface
 
-* System dependencies
+### Code Example
 
-* Configuration
+```ruby
+def wesh
+  puts "wesh"
+end
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```javascript
+ alert('ohe');
+end
+```

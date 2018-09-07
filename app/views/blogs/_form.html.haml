@@ -1,0 +1,17 @@
+= form_with(model: blog, local: true) do |form|
+  - if blog.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(blog.errors.count, "error")
+        prohibited this blog from being saved:
+      %ul
+        - blog.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :title
+    = form.text_field :title
+  .field
+    = form.label :body
+    = form.text_area :body
+  .actions
+    = form.submit

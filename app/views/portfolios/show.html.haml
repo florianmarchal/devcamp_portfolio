@@ -1,0 +1,7 @@
+= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil?
+
+%h1= @portfolio_item.title
+
+%em= @portfolio_item.subtitle
+
+%p= @portfolio_item.body

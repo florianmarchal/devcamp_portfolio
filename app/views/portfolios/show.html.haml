@@ -5,3 +5,8 @@
 %em= @portfolio_item.subtitle
 
 %p= @portfolio_item.body
+
+%h2 Technologies used
+
+- @portfolio_item.technologies.each do |t|
+  %p= t.name

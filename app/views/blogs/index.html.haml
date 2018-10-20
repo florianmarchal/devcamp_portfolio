@@ -9,7 +9,7 @@
   %tbody
     - @blogs.each do |blog|
       %tr
-        %td= blog.title
+        %td= blog.title.upcase
         %td= blog.body
         %td= link_to blog.status, toggle_status_blog_path(blog)
         %td= link_to 'Show', blog

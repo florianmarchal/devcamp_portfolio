@@ -13,10 +13,9 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice
-    %p.alert= alert
-    = render "shared/nav", location: 'top'
-    = login_helper
-    = yield
-    = copyright_generator
-    = source_helper "application"
+    .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column
+      = render "shared/application_nav"
+      = login_helper
+      = yield
+      = copyright_generator
+      = source_helper "application"

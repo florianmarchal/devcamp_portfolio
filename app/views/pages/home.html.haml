@@ -2,12 +2,4 @@
   %h1.cover-heading Cover your page.
   %p.lead Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
   %p.lead
-    %a.btn.btn-lg.btn-secondary{href: "#"} Learn more
-%footer.mastfoot.mt-auto
-  .inner
-    %p
-      Cover template for
-      = succeed "," do
-        %a{href: "https://getbootstrap.com/"} Bootstrap
-      = succeed "." do
-        %a{href: "https://twitter.com/mdo"} @mdo
+    = link_to "About Me", about_me_path, class: 'btn btn-lg btn-secondary'

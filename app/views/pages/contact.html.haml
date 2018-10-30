@@ -1,4 +1,15 @@
 %h1 Contact
-%p= number_to_phone "0617849096"
-%p= number_to_currency "15150"
-%p= number_with_delimiter "150845163216541"
+%hr
+.row
+  .col-md-6
+    %h3 Address
+    %p 65 avenue du Général de Gaulle, 68000 Colmar
+    %h3 Phone
+    %p= number_to_phone "+33617849096"
+    %h3 Email
+    %p= mail_to "florian.marchal@viacesi.fr?subject=PortfolioContact", "florian.marchal@viacesi.fr"
+    %h3 LinkedIn
+    %p= link_to "https://www.linkedin.com/in/fmarchal", "https://www.linkedin.com/in/fmarchal", target: "_blank"
+  .col-md-6
+    %iframe{allowfullscreen: "", frameborder: "0", height: "400", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.91110476058!2d7.338848415895212!3d48.07335876361008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479165c561fb6f1f%3A0x5c180337c0738962!2s65+Avenue+du+G%C3%A9n%C3%A9ral+de+Gaulle%2C+68000+Colmar%2C+France!5e0!3m2!1sen!2sch!4v1540912414230", style: "border:0", width: "500"}
+    

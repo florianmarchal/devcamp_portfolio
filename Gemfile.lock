@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/florianmarchal/pipala_view_tool
+  revision: 5c42d6584bc4e415b4287124d7fbbf74c6035224
+  specs:
+    pipala_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,6 +222,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
+  pipala_view_tool!
   pry-byebug
   puma (~> 3.11)
   rails (~> 5.2.1)

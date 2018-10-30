@@ -61,5 +61,6 @@ gem 'devise', '~> 4.5'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 
+
 #Custom gems
 gem 'pipala_view_tool', git: 'https://github.com/florianmarchal/pipala_view_tool'

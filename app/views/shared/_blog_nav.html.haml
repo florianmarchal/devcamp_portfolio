@@ -1,11 +1,7 @@
 .blog-masthead
   .container
     %nav.nav.d-flex
-      = link_to "Home", root_path, class: 'p-3 nav-link'
-      = link_to "About", about_me_path, class: 'p-3 nav-link'
-      = link_to "Contact", contact_path, class: 'p-3 nav-link'
-      = link_to "Blog", blogs_path, class: 'p-3 nav-link'
-      = link_to "Portfolio", portfolios_path, class: 'p-3 nav-link'
+      = nav_helper 'p-3 nav-link', 'span'
       = login_helper 'p-3 nav-link'
 
 

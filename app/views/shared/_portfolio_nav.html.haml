@@ -4,16 +4,15 @@
       .row
         .col-sm-8.col-md-7.py-4
           %h4.text-white About
-          %p.text-muted Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.
+          %p.text-muted 
+            I am a C# developer that is now specializing towards Rails development.
+            %br
+            %em #StriveForExcellence
         .col-sm-4.offset-md-1.py-4
           %h4.text-white Explore
           %ul.list-unstyled
-            %li= link_to "Home", root_path, class: "text-white"
-            %li= link_to "About", about_me_path, class: "text-white"
-            %li= link_to "Contact", contact_path, class: "text-white"
-            %li= link_to "Blog", blogs_path, class: "text-white"
-            %li= link_to "Portfolio", portfolios_path, class: "text-white"
-            %li= login_helper "text-white"
+            = nav_helper 'text-white', 'li'
+            %li= login_helper 'text-white'
   .navbar.navbar-dark.bg-dark.shadow-sm
     .container.d-flex.justify-content-between
       %a.navbar-brand.d-flex.align-items-center{href: "#"}

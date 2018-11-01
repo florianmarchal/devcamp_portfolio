@@ -1,5 +1,4 @@
-%h1 Portfolio items
-
-= link_to "New Item", new_portfolio_path if logged_in?(:site_admin)
-
-= render partial: 'portfolio_item', collection: @portfolio_items
+.album.py-5.bg-light
+  .container
+    .row
+      = render partial: 'portfolio_item', collection: @portfolio_items

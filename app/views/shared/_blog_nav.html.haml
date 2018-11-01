@@ -1,0 +1,11 @@
+.blog-masthead
+  .container
+    %nav.nav.d-flex
+      = link_to "Home", root_path, class: 'p-2 nav-link'
+      = link_to "About", about_me_path, class: 'p-2 nav-link'
+      = link_to "Contact", contact_path, class: 'p-2 nav-link'
+      = link_to "Blogs", blogs_path, class: 'p-2 nav-link'
+      = link_to "Portfolios", portfolios_path, class: 'p-2 nav-link'
+      = login_helper 'p-2 nav-link'
+
+

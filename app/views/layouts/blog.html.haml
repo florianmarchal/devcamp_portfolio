@@ -14,12 +14,14 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render "shared/blog_nav"
-      
+    %header.blog-header
+      .container
+        %h1 Pipala's Blog
+        = link_to 'Write a new blog post', new_blog_path if logged_in?(:site_admin)
     %main.container{role: "main"}
-      .text-center
-        %a.blog-header-logo.text-dark{href: "#"} Blogs  
       .row
-        = yield
+        .col-md-8.blog-main
+          = yield
         %aside.col-md-4.blog-sidebar
           .p-3.mb-3.bg-light.rounded
             %h4.font-italic About
@@ -63,15 +65,13 @@
                 %a{href: "#"} Twitter
               %li
                 %a{href: "#"} Facebook
-        %footer.blog-footer
-          %p
-            Blog template built for
-            %a{href: "https://getbootstrap.com/"} Bootstrap
-            by
-            = succeed "." do
-              %a{href: "https://twitter.com/mdo"} @mdo
-          %p
-            %a{href: "#"} Back to top
-        
-        = render "shared/nav", location: 'bottom'
-        = source_helper "blog"
+      %footer.blog-footer
+        %p
+          Blog template built for
+          %a{href: "https://getbootstrap.com/"} Bootstrap
+          by
+          = succeed "." do
+            %a{href: "https://twitter.com/mdo"} @mdo
+        %p
+          %a{href: "#"} Back to top 
+      = source_helper "blog"

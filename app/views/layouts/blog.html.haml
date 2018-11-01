@@ -14,21 +14,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render "shared/blog_nav"
-    %header.blog-header
-      .container
-        %h1 Pipala's Blog
-        = link_to 'Write a new blog post', new_blog_path if logged_in?(:site_admin)
+    = render "shared/blog_header"
     %main.container{role: "main"}
       .row
         = yield
         = render "shared/blog_sidebar"
-      %footer.blog-footer
-        %p
-          Blog template built for
-          %a{href: "https://getbootstrap.com/"} Bootstrap
-          by
-          = succeed "." do
-            %a{href: "https://twitter.com/mdo"} @mdo
-        %p
-          %a{href: "#"} Back to top 
+      = render "shared/blog_footer"
       = source_helper "blog"

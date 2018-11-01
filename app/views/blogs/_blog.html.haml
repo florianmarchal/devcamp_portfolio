@@ -4,9 +4,9 @@
   - if logged_in?(:site_admin)
     %p.blog-post-meta
       = link_to blog.status, toggle_status_blog_path(blog)
-      \/
+      |
       = link_to 'Edit', edit_blog_path(blog)
-      \/
+      |
       = link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' }
     
   %p= blog.body

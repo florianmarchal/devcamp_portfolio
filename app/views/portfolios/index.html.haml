@@ -1,4 +1,4 @@
 .album.py-5.bg-light
   .container
-    .row.sortable
+    %div{class: "row #{"sortable" if logged_in?(:site_admin)}"}
       = render partial: 'portfolio_item', collection: @portfolio_items

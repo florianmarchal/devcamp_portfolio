@@ -1,6 +1,4 @@
-ready = undefined
-
-ready = ->
+$ ->
   $('.sortable').sortable()
   $('.sortable').sortable().bind 'sortupdate', (e, ui) ->
     updated_order = []
@@ -15,5 +13,3 @@ ready = ->
       data: order: updated_order
     return  
   return
-
-$(document).ready ready

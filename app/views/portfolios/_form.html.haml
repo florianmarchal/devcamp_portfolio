@@ -8,9 +8,13 @@
         = form.label :subtitle
         = form.text_field :subtitle, class: "form-control"
       .form-group
-        = form.file_field :main_image
+        %label.btn.btn-primary.btn-block
+          Upload a main image file
+          = form.file_field :main_image, style: 'display:none;'
       .form-group
-        = form.file_field :thumb_image
+        %label.btn.btn-primary.btn-block
+          Upload a thumb image file
+          = form.file_field :thumb_image, style: 'display:none;'
     .col-md-6
       .form-group
         = form.label :body

@@ -77,3 +77,4 @@ stdout
 webrat.log
 .byebug_history
 /spec/config/e2e/config.yml
+.env

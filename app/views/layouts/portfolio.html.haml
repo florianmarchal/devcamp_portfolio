@@ -18,4 +18,5 @@
       = render "shared/portfolio_header" unless logged_in?(:site_admin)
       = yield
     = render "shared/portfolio_footer"
+    = alerts
     = source_helper "application"

@@ -8,11 +8,11 @@
         = form.label :subtitle
         = form.text_field :subtitle, class: "form-control"
       .form-group
-        %label.btn.btn-primary.btn-block
+        %label.btn.btn-primary
           Upload a main image file
           = form.file_field :main_image, style: 'display:none;'
       .form-group
-        %label.btn.btn-primary.btn-block
+        %label.btn.btn-primary
           Upload a thumb image file
           = form.file_field :thumb_image, style: 'display:none;'
     .col-md-6
@@ -23,8 +23,8 @@
     %h3 Technologies Used
     %div
       = form.fields_for :technologies do |technology_form|
-        .form-group
-          = technology_form.label :name
-          = technology_form.text_field :name, class: "form-control"
+        = render 'technology_fields', f: technology_form
+      %div
+        = link_to_add_association 'Add Technology', form, :technologies
     .form-group
       = form.submit "Save Portfolio Item", class: "btn btn-primary btn-block"

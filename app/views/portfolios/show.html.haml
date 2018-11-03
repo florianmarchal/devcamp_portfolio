@@ -10,3 +10,6 @@
       %h3 Technologies used
       - @portfolio_item.technologies.each do |t|
         %p= t.name
+      - if logged_in?(:site_admin)
+        %div
+          = link_to 'Edit', edit_portfolio_path(@portfolio_item), class: 'btn btn-warning'

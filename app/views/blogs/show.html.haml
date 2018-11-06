@@ -3,12 +3,6 @@
   = link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)
   %p= @blog.body
 
-  - unless current_user.is_a? GuestUser
-    = form_for @comment, url: '#' do |f|
-      .form-group
-        = f.label :content
-        = f.text_area :content, class: 'form-control'
-      .form-group
-        = f.submit 'Post Comment', class: 'btn btn-primary'
+  = render 'comments/comment_form'
   = render @blog.comments
   

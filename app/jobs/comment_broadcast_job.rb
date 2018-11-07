@@ -5,7 +5,7 @@ class CommentBroadcastJob < ApplicationJob
     ActionCable.server.broadcast "blogs_#{comment.blog.id}_channel", comment: render_comment(comment)
   end
 
-  def render_comment
+  def render_comment(comment)
     CommentsController.render partial: 'comments/comment', locals: { comment: comment }
   end
 end

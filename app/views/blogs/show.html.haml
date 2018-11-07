@@ -4,5 +4,6 @@
   %p= @blog.body
 
   = render 'comments/comment_form'
-  = render @blog.comments
+  #comments{ 'data-blog-id': @blog.id }
+    = render @blog.comments
   

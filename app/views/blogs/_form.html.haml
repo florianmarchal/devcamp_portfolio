@@ -5,6 +5,9 @@
   .form-group
     = form.text_field :title, class: 'form-control', placeholder: 'Title'
   .form-group
+    = form.label :topic_id
+    = form.collection_select(:topic_id, Topic.all, :id, :title, { selected: blog.topic.present? ? blog.topic.id : nil, include_blank: true }, class: 'form-control')
+  .form-group
     = form.text_area :body, class: 'form-control', rows: 15, placeholder: 'Content'
   .form-group
     = form.submit "Submit", class: 'btn btn-primary'

@@ -1,27 +1,27 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:edit, :update, :destroy, :toggle_status]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
   # GET /blogs
   # GET /blogs.json
   def index
-    if logged_in?(:site_admin)
-      @blogs = Blog.recent.page(params[:page]).per(5)
-    else
-      @blogs = Blog.published.recent.page(params[:page]).per(5)
-    end
+    @blogs = logged_in?(:site_admin) ? Blog.recent.page(params[:page]).per(5) : Blog.published.recent.page(params[:page]).per(5)
     @page_title = "Florian Marchal Blogs"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
 
-    @page_title = @blog.title
-    @seo_keywords = @blog.body
+      @page_title = @blog.title
+      @seo_keywords = @blog.body
+    else 
+      redirect_to blogs_path, notice: 'you are not authorized to access this page'
+    end
   end
 
   # GET /blogs/new

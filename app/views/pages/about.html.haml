@@ -5,7 +5,12 @@
     .row
       .col-md-4    
         = image_tag "me.jpeg", width: 250, alt: "profile image"
-    
+        .skills
+          - @skills.each do |skill|
+            .skill
+              %h4= skill.title
+              .progress
+                .progress-bar.progress-bar-striped.bg-warning{role: 'progressbar', 'aria-valuenow': skill.percent_utilized, 'aria-valuemax': '100', style: "width: #{ skill.percent_utilized }%;" }
       .col-md-8
         %p
           I am a C# developer that is now specializing towards Rails development. I like soccer and playing videos games such as World of Warcraft.

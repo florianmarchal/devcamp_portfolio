@@ -1,4 +1,7 @@
 %header.blog-header
   .container
     %h1.blog-title Pipala's Blog
-    = link_to 'Write a new blog post', new_blog_path if logged_in?(:site_admin)
+    %span= link_to 'Write a new blog post', new_blog_path if logged_in?(:site_admin)
+    |
+    %span= link_to 'Topics', topics_path
+    

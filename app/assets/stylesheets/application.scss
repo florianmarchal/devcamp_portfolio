@@ -158,9 +158,21 @@ body {
 }
 
 .tech-news a {
-  color: #007bff;
+  color: #428bca;
 }
 
 .tech-news > .card{
   padding: 30px;
+}
+
+.app-card-container {
+  color: #555555;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.app-card-container a {
+  color: #428bca;
 }

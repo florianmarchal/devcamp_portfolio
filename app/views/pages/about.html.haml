@@ -11,3 +11,21 @@
           I am a C# developer that is now specializing towards Rails development. I like soccer and playing videos games such as World of Warcraft.
         %p
           %em #StriveForExcellence
+        %p
+          %button.btn.btn-primary{ type: 'button', 'data-toggle': 'collapse', 'data-target': '#jobHistory', 'aria-expanded': false, 'aria-controller': 'jobHistory' }
+            Job History
+          %button.btn.btn-primary{ type: 'button', 'data-toggle': 'collapse', 'data-target': '#education', 'aria-expanded': false, 'aria-controller': 'education' }
+            Education
+        %p
+          #jobHistory.collapse   
+            .card.card-body
+              Software Engineer at Coupa
+            .card.card-body
+              C# .Net consultant at Alsanium
+            .card.card-body
+              Developer at Sogeti
+          #education.collapse
+            .card.card-body
+              Master Degree in Software Engineering
+            .card.card-body
+              High school diploma in sciences

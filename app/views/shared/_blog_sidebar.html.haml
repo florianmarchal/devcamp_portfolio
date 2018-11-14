@@ -5,6 +5,11 @@
       I am a C# developer that is now specializing towards Rails development.
       %br
       %em #StriveForExcellence
+  = source_helper("alert alert-info blog-sidebar-source")
+  .p-3
+    %h4 Topics
+    - @site_bar_topics.each do |topic|
+      %p= link_to topic.title, topic_path(topic)
   .p-3
     %h4.font-italic Elsewhere
     %ol.list-unstyled.social-links

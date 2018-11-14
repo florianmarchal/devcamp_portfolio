@@ -18,5 +18,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :topics, only: [:index, :show]
+
   mount ActionCable.server => '/cable'
 end
